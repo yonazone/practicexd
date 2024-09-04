@@ -1,0 +1,3 @@
+  PID TTY          TIME CMD
+ 5615 pts/0    00:00:00 /data/data/com.termux/files/usr/bin/bash
+ 9542 pts/0    00:00:00 ps

@@ -1,0 +1,20 @@
+.   .git    bill.o  fred.o  libfoo.a	  notbad      program
+..  bill.c  fred.c  lib.h   lsoutput.txt  notbad.cpp  program.c
+total 111
+drwx------ 3 u0_a304 u0_a304  3452 Sep  2 18:02 .
+drwx------ 4 u0_a304 u0_a304  3452 Aug 31 13:33 ..
+drwx------ 6 u0_a304 u0_a304  3452 Sep  2 15:54 .git
+-rw------- 1 u0_a304 u0_a304    84 Sep  2 15:51 bill.c
+-rw------- 1 u0_a304 u0_a304  1320 Sep  2 15:53 bill.o
+-rw------- 1 u0_a304 u0_a304    82 Sep  2 15:49 fred.c
+-rw------- 1 u0_a304 u0_a304  1320 Sep  2 15:53 fred.o
+-rw------- 1 u0_a304 u0_a304    35 Sep  2 15:59 lib.h
+-rw------- 1 u0_a304 u0_a304  2850 Sep  2 16:11 libfoo.a
+-rw------- 1 u0_a304 u0_a304   123 Sep  2 18:04 lsoutput.txt
+-rwx------ 1 u0_a304 u0_a304 55208 Aug 31 16:09 notbad
+-rw------- 1 u0_a304 u0_a304    79 Aug 31 16:09 notbad.cpp
+-rwx------ 1 u0_a304 u0_a304  6528 Sep  2 16:14 program
+-rw------- 1 u0_a304 u0_a304    89 Sep  2 16:03 program.c
+  PID TTY          TIME CMD
+15483 pts/0    00:00:00 ps
+19481 pts/0    00:00:00 /data/data/com.termux/files/usr/bin/bash

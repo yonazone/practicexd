@@ -1,0 +1,12 @@
+bill.c
+bill.o
+fred.c
+fred.o
+lib.h
+libfoo.a
+lsout.txt
+lsoutput.txt
+notbad
+notbad.cpp
+program
+program.c
