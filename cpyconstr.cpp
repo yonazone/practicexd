@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-class string
+class String
 {
   char* m_Buffer;
   unsigned int m_Size;
