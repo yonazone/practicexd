@@ -19,7 +19,7 @@ int main()
     // Displaying results
     std::cout << std::fixed << std::setprecision(9);
     std::cout << "Time taken with std::endl: " << duration_endl.count() << " seconds\n";
-    std::cout << "Time taken with \\n: " << duration_n.count() << " seconds\n";
+    std::cout << "Time taken with \n: " << duration_n.count() << " seconds\n";
     
     return 0;
 }
