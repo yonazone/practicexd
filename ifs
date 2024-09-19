@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Example to demonstrate the difference between $@ and $*, that is IFS
+
+IFS=''
+set foo bar bam
+echo "$@"
+echo "$*"
+unset IFS
+echo "$*"

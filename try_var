@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Simple script to demonstrate simple variable manipulation
+
+salutation="Hello"
+echo $salutation
+echo "The program $0 is now running"
+echo "The second parameter was $2"
+echo "The first parameter was $1"
+echo "The parameter list was $@"
+echo "The user's home directory is $HOME and \n the path is $PATH"
+
+echo "Please enter a new greeting"
+read salutation
+
+echo $salutation
+echo "The script is now complete"
+
+exit 0
+
+# This script creates the variable salutation, displays its contents, and then shows how various parameter variables and the environment variable $HOMEalready exist and have appropriate values.

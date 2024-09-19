@@ -1,0 +1,16 @@
+#!/bin/bash
+
+str="Nope"
+strw="Nope"
+
+if test str=strw
+then
+	echo yeayyy
+fi
+
+if test $((10+5)) -eq $((9+6))
+then
+	echo hurray
+fi
+
+exit 0

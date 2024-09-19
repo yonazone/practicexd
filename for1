@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for file in $(ls f*)
+do
+	lpr $file
+done
+
+exit 0
