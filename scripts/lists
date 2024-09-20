@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ -f for ]; then
+	if [ -f for1 ]; then
+		if [ -f for2 ]; then
+			echo "All files present, and correct"
+		fi
+	fi
+fi
+
+exit 0

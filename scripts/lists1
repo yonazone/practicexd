@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ -f for ]; then
+	foo="True"
+elif [ -f for1 ]; then
+	foo="True"
+elif [ -f for2 ]; then
+	foo="True"
+else
+	foo="False"
+fi
+
+if [ "$foo" = "True" ]; then
+	echo "One of the files exists"
+fi
+
+exit 0

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+foo()
+{
+	echo JAY;
+}
+
+echo "ok done"
+result="$(foo)"
+
+echo $result
+
+exit 0
