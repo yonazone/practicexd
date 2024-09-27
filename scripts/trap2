@@ -1,0 +1,25 @@
+#!/bin/bash
+
+trap 'rm -f $TMPDIR/my_tmp_file_$$' SIGINT
+echo creating file $TMPDIR/my_tmp_file_$$
+date > $TMPDIR/my_tmp_file_$$
+
+echo "press interrupt (Ctrl-C) to interrupt ....."
+while [ -f $TMPDIR/my_tmp_file_$$ ]; do
+	echo File exists
+	sleep 1
+done
+echo The file no longer exists
+
+trap SIGINT
+echo creating file $TMPDIR/my_tmp_file_$$
+date > $TMPDIR/my_tmp_file_$$
+
+echo "press interrupt (Ctrl-C) to interrupt ....."
+while [ -f $TMPDIR/my_tmp_file_$$ ]; do
+	echo File exists
+	sleep 1
+done
+
+echo we never get here
+exit 0

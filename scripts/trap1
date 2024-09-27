@@ -1,0 +1,10 @@
+#!/bin/bash
+
+trap "Im quitting" SIGQUIT
+
+while :
+do
+	echo Taste
+done
+
+exit 0

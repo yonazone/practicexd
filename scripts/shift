@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Saving original param list so that after doing the shift the param get discarded
+original_params="$*"
+
+while [ "$1" != "" ]
+do
+	echo "$1"
+	shift
+done
+
+# Setting back to original command:
+set -- $original_params
+echo "$2"
+
+exit 0

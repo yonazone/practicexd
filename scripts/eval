@@ -1,0 +1,11 @@
+#!/bin/bash
+
+foo=10
+x=foo
+y='$'$x
+echo $y
+
+foo1=10
+r=foo1
+eval s='$'$r
+echo $s

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+trap_saved_SIGINT=$(trap -p SIGINT)
+trap "echo Trapped." SIGINT
+
+sleep 10
+
+eval "$trap_saved_SIGINT"
