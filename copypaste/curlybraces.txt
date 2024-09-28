@@ -1,0 +1,8 @@
+Autocompletion
+This is in WSL
+inoremap { {<CR>}<Esc>0<BS><Tab>
+
+THE FOLLOWINF IS AFTER HOURS OF HARDWORK on kali
+dont know what happens to vim sometimes
+inoremap { {<CR>}<C-o>0<Tab><C-o>i<CR><ESC><BS><Tab>i
+
