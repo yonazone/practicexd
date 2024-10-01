@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Ask some questions and collect the answer :)
+
+dialog --title "Questionnaire" --msgbox "Welcome to my simple survey" 15 25
+dialog --title "Confirm" --yesno "Are you willing to take part?" 15 25
+
+if [ $? != 0 ]; then
+	dialog --infobox "Thank you anyway" 5 20
+	sleep 2
+	dialog --clear
+	exit 0
+fi
+
+exit 0

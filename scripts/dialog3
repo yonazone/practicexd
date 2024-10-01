@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Generate a random number between 1 and 100
+TARGET=$(((RANDOM % 100) + 1))
+
+dialog --title "Gome :)" --inputbox "Please enter the guessed number (1-100)" 9 30 2>_4.txt
+G_NUM=$(cat _4.txt)
+
+while [ "$G_NUM" -ne "$TARGET" ]; do
+	if [ "$G_NUM" -eq "$TARGET" ]; then
+		dialog --msgbox "Hurray!! You are absolutely correct :)" 17 30
+	elif [ "$G_NUM" -gt "$TARGET" ]; then
+		dialog --msgbox "Too high. Try again :(" 17 30
+	elif [ "$G_NUM" -lt "$TARGET" ]; then
+		dialog --msgbox "Too low. Try again :(" 17 30
+	fi
+	dialog --title "Gome :)" --inputbox "Please enter the guessed number (1-100)" 9 30 2>_5.txt
+	G_NUM=$(cat _5.txt)
+done
+
+# Success message when guess is correct
+dialog --msgbox "Hurray!! You are absolutely correct!" 17 30
+
+sleep 8
+dialog --clear
+
+exit 0
