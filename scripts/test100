@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Basic dialog test
+dialog --menu "Test Menu" 10 30 3 \
+    1 "Rock" \
+    2 "Paper" \
+    3 "Scissors" 2>_choice.txt
+
+# Display choice
+CHOICE=$(cat _choice.txt)
+echo "You chose: $CHOICE"
