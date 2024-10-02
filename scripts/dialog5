@@ -24,9 +24,9 @@ while [ "$CONTINUE" == "y" ]; do
 
 	if [ "$PLAYER_CHOICE" == "$COMPUTER_CHOICE" ]; then
 		dialog --msgbox "That's a tie!\nThe computer's choice was $COMPUTER_CHOICE" 17 30
-	elif [ "$PLAYER_CHOICE" == "1" -a "$COMPUTER_CHOICE" == "Scissors" ] || \
-		 [ "$PLAYER_CHOICE" == "2" -a "$COMPUTER_CHOICE" == "Rock" ] || \
-		 [ "$PLAYER_CHOICE" == "3" -a "$COMPUTER_CHOICE" == "Paper" ]; then
+	elif [ "$PLAYER_CHOICE" == "Rock" -a "$COMPUTER_CHOICE" == "Scissors" ] || \
+		 [ "$PLAYER_CHOICE" == "Paper" -a "$COMPUTER_CHOICE" == "Rock" ] || \
+		 [ "$PLAYER_CHOICE" == "Scissors" -a "$COMPUTER_CHOICE" == "Paper" ]; then
 		dialog --msgbox "You win!\nThe computer's choice was $COMPUTER_CHOICE" 17 30
 		P_SCORE=$(($P_SCORE + 1))
 	else 
