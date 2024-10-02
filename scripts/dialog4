@@ -28,6 +28,8 @@ while [ "$TRIALS" -ge 0 ]; do
 	TRIALS=$(($TRIALS - 1))
 done
 
+dialog --msgbox "Sorry, you have run out of tries. The number was $TARGET" 17 30
+
 sleep 8
 dialog --clear
 

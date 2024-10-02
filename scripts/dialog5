@@ -1,0 +1,38 @@
+#!/bin/bash
+
+CONTINUE="y"
+P_SCORE=0
+C_SCORE=0
+
+while [ "$CONTINUE" == "y" ]; do #After completing while. print thanks for playing
+	OPTIONS=("Rock" "Paper" "Scissors")
+	COMPUTER_CHOICE=${OPTIONS[$((RANDOM % 3))]}
+
+	# Intaking player choice
+	dialog --menu "Rock, Paper, Scissors" 17 50 3 \
+		1 "Rock" \
+		2 "Paper" \
+		3 "Scissors" \ 2>_player_choice.txt
+	PLAYER_CHOICE=$(cat _player_choice.txt)
+
+	if [ "$PLAYER_CHOICE" == "$COMPUTER_CHOICE" ]; then
+		dialog --msgbox "That's a tie!\nThe computer's choice was $COMPUTER_CHOICE" 17 30
+	elif [ "$PLAYER_CHOICE" == "1" -a "$COMPUTER_CHOICE" == "Scissors" ] || \
+		 [ "$PLAYER_CHOICE" == "2" -a "$COMPUTER_CHOICE" == "Rock" ] || \
+		 [ "$PLAYER_CHOICE" == "3" -a "$COMPUTER_CHOICE" == "Paper" ]; then
+		dialog --msgbox "You win!\nThe computer's choice was $COMPUTER_CHOICE" 17 30
+		P_SCORE=$(($P_SCORE + 1))
+	else 
+		dialog --msgbox "You lose.\nThe computer'schoice was $COMPUTER_CHOICE" 17 30
+		C_SCORE=$(($C_SCORE + 1))
+	fi
+
+	dialog --inputbox "Do you want to continue? (y/n)\nYour score: $P_SCORE\nComputer's score: $C_SCORE" 20 30 2>yes_no.txt
+	CONTINUE=$(cat yes_no.txt)
+done
+
+sleep 8
+dialog --clear
+
+exit 0
+
